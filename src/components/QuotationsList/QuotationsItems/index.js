@@ -1,7 +1,7 @@
 import { View, Text, Image } from "react-native";
 import styles from './style';
 
-export const QuotationItems = () => {
+export const QuotationItems = ({valor, data}) => {
     return (
         <View style={styles.mainCard}>
             <View style={styles.contextLeft}>
@@ -9,11 +9,11 @@ export const QuotationItems = () => {
                     <Image
                         style={styles.logBitcoin}
                         source={require("../../../img/bitCoinLogo.png")} />
-                    <Text style={styles.dayCotation}>13/01/2024</Text>
+                    <Text style={styles.dayCotation}>{data}</Text>
                 </View>
             </View>
             <View style={styles.contextRight}>
-                <Text style={styles.price}>$ 53331.052</Text>
+                <Text style={styles.price}>${valor}</Text>
             </View>
         </View>
     );
